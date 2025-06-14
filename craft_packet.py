@@ -1,8 +1,8 @@
 from scapy.all import *
-from scapy.layers.inet import IP, ICMP
+from scapy.layers.inet import IP, ICMP, TCP
 
-# Custom packet with ICMP
-packet = IP(dst="8.8.8.8") / ICMP()
+# custom packet / ICMP
+packet = IP(dst="8.8.8.8") / ICMP() / Raw()
 
-# Show packet details
+# show packet details
 packet.show()
